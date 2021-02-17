@@ -1,16 +1,22 @@
 # -*- coding: utf-8 -*-
 
 
-def knn_graph(points, k = 1):
+def kNN(points, k = 1):
     """
     By: Group 2 for CMSE 802 
     Date: 2/17/21
     Function: Calculate k-NN graph.
     """
+    import numpy as np
     import networkx as nx
     from sklearn.neighbors import NearestNeighbors
     
-    # get shape of vectors of positions
+    points = np.array(points) #change to numpy array
+    
+    # get shape of vectors of positions and do shape check to validate it is correct shape.
+    row, col = points.shape[0], points.shape[1]
+    if col != 2: #should be (N x 2) array
+        points = points.T
     N = points.shape[0]
 
     G = nx.Graph() #intiialize graph
@@ -51,7 +57,7 @@ if __name__ == "__main__":
 
     points = generate_towers(50)
     
-    G = knn_graph(points, k = 5)
+    G = kNN(points, k = 5)
     
     node_pos = {}
     for v in G.nodes():
