@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+import numpy as np
+import networkx as nx
+from sklearn.neighbors import NearestNeighbors
+import matplotlib.pyplot as plt
 
 
 def kNN(points, k = 1):
@@ -7,9 +11,7 @@ def kNN(points, k = 1):
     Date: 2/17/21
     Function: Calculate k-NN graph.
     """
-    import numpy as np
-    import networkx as nx
-    from sklearn.neighbors import NearestNeighbors
+
     
     points = np.array(points) #change to numpy array
     
@@ -39,34 +41,32 @@ def kNN(points, k = 1):
 # In[ ]: 
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
     
-    import numpy as np
-    import networkx as nx
-    import matplotlib.pyplot as plt
+
         
 
 
-    def generate_towers(N):
-        import numpy as np
-        x = np.random.uniform(0, 1, N)
-        y = np.random.uniform(0, 1, N)
-        points = np.array([x,y]).T
-        return points 
+# #    def generate_towers(N):
+# #        import numpy as np
+# #        x = np.random.uniform(0, 1, N)
+# #        y = np.random.uniform(0, 1, N)
+# #        points = np.array([x,y]).T
+# #        return points 
 
-    points = generate_towers(50)
+# #    points = generate_towers(50)
     
-    G = kNN(points, k = 5)
+#     G = kNN(points, k = 5)
     
-    node_pos = {}
-    for v in G.nodes():
-        node_pos[v] = points[v,:]
+#     node_pos = {}
+#     for v in G.nodes():
+#         node_pos[v] = points[v,:]
     
-    fig, ax = plt.subplots()
-    nx.draw(G,node_pos, node_size = 20)
-    limits = plt.axis('on')
-    ax.tick_params(left = True, bottom = True,labelleft=True, labelbottom=True)
-    plt.show()
+#     fig, ax = plt.subplots()
+#     nx.draw(G,node_pos, node_size = 20)
+#     limits = plt.axis('on')
+#     ax.tick_params(left = True, bottom = True,labelleft=True, labelbottom=True)
+#     plt.show()
     
 
