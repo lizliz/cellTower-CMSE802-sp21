@@ -1,4 +1,5 @@
 import random
+import numpy as np
 #you need to pass it something for the argument, but it doesn't use whatever you pass it
 def downloadTowerData(filename):
     N = 10
@@ -10,4 +11,5 @@ def downloadTowerData(filename):
         coord = [x,y]
         loc.append(coord)
         i=i+1
+    loc = np.array(loc)
     return(loc)
