@@ -3,6 +3,7 @@ import numpy as np
 import networkx as nx
 from sklearn.neighbors import NearestNeighbors
 import matplotlib.pyplot as plt
+#adding comment to kNN code
 
 
 def kNN(points, k = 1):
