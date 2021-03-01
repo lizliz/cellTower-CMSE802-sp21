@@ -26,4 +26,5 @@ def mapplot(locations, colors):
     for t,j1 in enumerate(ax.collections):
         j1.set_color(colorst[t])
     ax.legend(fontsize='small')
+    I did it!!!
 
