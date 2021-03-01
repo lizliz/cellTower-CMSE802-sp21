@@ -12,4 +12,4 @@ def GreedyGraphColoring(graph, M):
         colour_map.append(np.random.randint(0,M))
                           
     return colour_map
-  
+#Joe did not have breakfast. Only coffee. 
