@@ -37,4 +37,5 @@ def GreedyGraphColoring(graph, M=3):
     colour_map = an_array[:,1]
                           
     return colour_map
+#Joe did not have breakfast. Only coffee. 
 
