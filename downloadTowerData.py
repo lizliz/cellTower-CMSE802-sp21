@@ -1,6 +1,8 @@
 import numpy as np
 from pandas import read_csv
 
+#I had waffles for breakfast
+
 def downloadTowerData(filename, latt_pos = 3, long_pos = 4):
     
     """
